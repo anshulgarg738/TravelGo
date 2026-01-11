@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TravelGo - Flights, Hotels, Holidays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="logo">TravelGo</div>
+      <nav class="nav-links">
+        <a href="#" class="active">Flights</a>
+        <a href="#">Hotels</a>
+        <a href="#">Holidays</a>
+        <a href="#">Trains</a>
+        <a href="#">Bus</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="nav-link">My Trips</a>
+      <button class="nav-btn secondary">Login</button>
+      <button class="nav-btn primary">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-inner">
+        <h1 class="hero-title">Book cheap flights, hotels & more</h1>
+        <p class="hero-subtitle">
+          Search, compare and book in minutes. No hidden charges.
+        </p>
+
+        <!-- Search Card -->
+        <div class="search-card">
+          <div class="search-tabs">
+            <button class="tab active">Flights</button>
+            <button class="tab">Hotels</button>
+            <button class="tab">Holidays</button>
+          </div>
+
+          <form id="bookingForm" class="search-form">
+            <div class="row">
+              <div class="field">
+                <label for="fromCity">From</label>
+                <input id="fromCity" placeholder="Delhi" required />
+              </div>
+              <div class="field">
+                <label for="toCity">To</label>
+                <input id="toCity" placeholder="Goa" required />
+              </div>
+              <div class="field">
+                <label for="departDate">Departure</label>
+                <input type="date" id="departDate" required />
+              </div>
+              <div class="field">
+                <label for="returnDate">Return</label>
+                <input type="date" id="returnDate" />
+              </div>
+            </div>
+
+            <div class="row row-bottom">
+              <div class="field">
+                <label for="travellers">Travellers</label>
+                <select id="travellers">
+                  <option value="1">1 Traveller</option>
+                  <option value="2">2 Travellers</option>
+                  <option value="3">3 Travellers</option>
+                  <option value="4">4 Travellers</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="travelClass">Class</label>
+                <select id="travelClass">
+                  <option value="economy">Economy</option>
+                  <option value="premium">Premium Economy</option>
+                  <option value="business">Business</option>
+                </select>
+              </div>
+              <div class="field search-btn-wrap">
+                <button type="submit" class="primary-btn">
+                  Search Flights
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Result / Itinerary summary -->
+        <div id="result" class="result"></div>
+
+        <!-- Recent Searches -->
+        <div class="recent-searches" id="recentSearches"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deals Section -->
+  <section class="deals">
+    <div class="deals-header">
+      <h2>Trending flight deals</h2>
+      <span>Handpicked for your next trip</span>
+    </div>
+    <div class="deals-grid">
+      <div class="deal-card">
+        <div class="route">Delhi → Goa</div>
+        <div class="price">From ₹3,499</div>
+        <div class="tag">Weekend deal</div>
+      </div>
+      <div class="deal-card">
+        <div class="route">Mumbai → Bengaluru</div>
+        <div class="price">From ₹2,899</div>
+        <div class="tag">Non-stop</div>
+      </div>
+      <div class="deal-card">
+        <div class="route">Kolkata → Hyderabad</div>
+        <div class="price">From ₹3,199</div>
+        <div class="tag">Limited seats</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
